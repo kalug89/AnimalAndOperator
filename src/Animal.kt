@@ -1,10 +1,12 @@
-open class Animal {
+import kotlin.random.Random
 
-    open fun move() {
+abstract class Animal {
+
+    val age = Random.nextInt(1, 10)
+
+    open fun printAge(){
+        println(age)
     }
 
-    open fun move(firstName: String) {
-        println("$firstName: walk")
-    }
-
+    abstract fun move()
 }

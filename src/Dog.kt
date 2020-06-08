@@ -1,21 +1,21 @@
-class Dog : AnimalAttacks() {
-    private val animalName = "Dog"
-    private val damage = "15"
+class Dog() : Animal(), AbleToAttack {
+    private lateinit var name: String
 
-    override fun move() {
-        println("$animalName: walk")
+    constructor(name: String): this(){
+        this.name = name
     }
 
-    override fun move(firstName: String) {
-        println("$firstName: walk")
+    override val damage = 15
+
+    override fun move() {
+        println("${javaClass.name}: walk")
     }
 
     override fun attack() {
-        println("$animalName attack: -$damage HP")
+        println("${javaClass.name} attack: -$damage HP")
     }
 
     fun track() {
         println("Sniff...")
     }
-
 }

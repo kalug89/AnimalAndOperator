@@ -1,14 +1,12 @@
-class Eagle : AnimalAttacks() {
+class Eagle : Animal(), AbleToAttack {
 
-    private val animalName = "Eagle"
-    private val damage = "20"
+    override val damage = 20
 
     override fun move() {
-        println("$animalName: fly")
+        println("${javaClass.name}: fly")
     }
 
     override fun attack() {
-        println("$animalName attack: -$damage HP")
+        println("${javaClass.name} attack: -$damage HP")
     }
-
 }

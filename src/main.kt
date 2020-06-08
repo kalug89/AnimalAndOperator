@@ -1,7 +1,17 @@
+/*
+1) Zamiana Animalattacks na interface + able ( moge dodać pole z damage)
+2) Zamiana damage na Int
+3) Konstruktor  zopcjonalnym parametrem w klasie dog
+4) w fun move w dog nie dajemy parametru z imieniem
+5) klasa + fun Animal powinna być abstrakcyjna
+6) Jak jest stała uzywamy const
+ */
+
+
 fun main() {
 
 //    Dog().move()
-//    Dog().move("Azor")
+//    Dog("Azor")
 //    Cat().move()
 //    Fish().move()
 //    Eagle().move()
@@ -12,11 +22,12 @@ fun main() {
 //
 //    Dog().track()
 //
-//    Dog().age()
-    val animalList = listOf(Dog(), Cat(), Cat(), Fish(), Fish(), Fish(), Eagle())
+//    Dog().age
+//    Dog().printAge()
 
+
+    val animalList = listOf(Dog("Azor"), Cat(), Cat(), Fish(), Fish(), Fish(), Eagle())
+//
     animalList.forEach { it.move() }
-    animalList.filterIsInstance<AnimalAttacks>().forEach { it.attack() }
-
-
-}
+    animalList.filterIsInstance<AbleToAttack>().forEach { it.attack() }
+    }
